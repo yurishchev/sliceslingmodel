@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yurishchev.aem</groupId>
+        <artifactId>sliceslingmodel-bundles</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>sliceslingmodel-components-slingmodel</artifactId>
+    <packaging>bundle</packaging>
+    <name>sliceslingmodel - Components Bundle with Sling Models</name>
+    <description>OSGi bundle for Sling Models components code</description>
+
+    <properties>
+        <bundle.export>
+            com.yurishchev.aem.components.model.slingmodel
+        </bundle.export>
+        <bundle.private>
+        </bundle.private>
+        <bundle.sling.models>
+            com.yurishchev.aem.components.model.slingmodel
+        </bundle.sling.models>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yurishchev.aem</groupId>
+            <artifactId>sliceslingmodel-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.models.impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.models.api</artifactId>
+        </dependency>
+    </dependencies>
+</project>

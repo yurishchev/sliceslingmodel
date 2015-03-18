@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Link Component"
+          height="{Long}600"
+          width="{Long}600"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1 jcr:primaryType="cq:Panel" title="Complex Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title jcr:primaryType="nt:unstructured"
+                          fieldLabel="Text"
+                          name="./title"
+                          validateOnBlur="true"
+                          xtype="textfield"/>
+                    <tooltip jcr:primaryType="nt:unstructured"
+                          fieldLabel="Tooltip"
+                          name="./tooltip"
+                          validateOnBlur="true"
+                          xtype="textfield"/>
+                    <alignment jcr:primaryType="nt:unstructured"
+                               fieldLabel="Alignment"
+                               name="./alignment"
+                               validateOnBlur="true"
+                               xtype="textfield"/>
+                    <path jcr:primaryType="cq:Widget"
+                               allowBlank="false"
+                               fieldDescription="Enter path to data source"
+                               fieldLabel="Image Source"
+                               name="./path"
+                               rootPath="/content"
+                               width="{Long}400"
+                               xtype="pathfield"/>
+                    <css jcr:primaryType="nt:unstructured"
+                               fieldLabel="CSS"
+                               name="./css"
+                               validateOnBlur="true"
+                               xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

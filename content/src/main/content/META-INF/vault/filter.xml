@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/content/sliceslingmodel" mode="merge" />
+	<filter root="/apps/sliceslingmodel" mode="replace" />
+	<filter root="/etc/designs/sliceslingmodel" mode="replace" />
+</workspaceFilter>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/sliceslingmodel"
+        cq:template="/apps/sliceslingmodel/templates/samplepage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sample Page"
+        sling:resourceType="sliceslingmodel/components/page/samplepage"
+        pageTitle="samplepage">
+        <complexComponent
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="sliceslingmodel/components/modular/complexComponent"
+            cq:tags="[properties:orientation,properties:orientation/square,properties:style,properties:style/monochrome]"
+            alignment="CENTER"
+            text="Text 1"
+            valid="true">
+            <image
+                jcr:primaryType="nt:unstructured"
+                altText="Image Alt Text"
+                fileReference="/content/sliceslingmodel/en.html"/>
+            <links
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <linkcomponent
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="sliceslingmodel/components/modular/linkComponent"
+                    alignment="LEFT"
+                    css="CSS 1"
+                    path="/content/sliceslingmodel/en.html"
+                    title="Text 1"
+                    tooltip="Tooltip 1"/>
+                <linkcomponent_0
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="sliceslingmodel/components/modular/linkComponent"
+                    alignment="RIGHT"
+                    css="CSS 2"
+                    path="/content/sliceslingmodel/en.html"
+                    title="Text 2"
+                    tooltip="Tooltip 2"/>
+            </links>
+        </complexComponent>
+    </jcr:content>
+</jcr:root>

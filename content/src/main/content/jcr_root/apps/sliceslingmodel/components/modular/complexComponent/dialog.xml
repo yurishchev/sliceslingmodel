@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Complex Component"
+          height="{Long}600"
+          width="{Long}600"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1 jcr:primaryType="cq:Panel" title="Complex Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text jcr:primaryType="nt:unstructured"
+                          fieldLabel="Text"
+                          name="./text"
+                          validateOnBlur="true"
+                          xtype="textfield"/>
+                    <valid jcr:primaryType="cq:Widget"
+                           defaultValue="false"
+                           fieldLabel="Is Valid?"
+                           name="./valid"
+                           type="checkbox"
+                           xtype="selection"/>
+                    <tags jcr:primaryType="cq:Widget"
+                          fieldLabel="Tags"
+                          name="./cq:tags"
+                          validateOnBlur="true"
+                          allowBlank="true"
+                          autoHeight="true"
+                          autoScroll="true"
+                          xtype="tags"/>
+                    <alignment jcr:primaryType="nt:unstructured"
+                               fieldLabel="Alignment"
+                               name="./alignment"
+                               validateOnBlur="true"
+                               xtype="textfield"/>
+                    <imagePath jcr:primaryType="cq:Widget"
+                               allowBlank="false"
+                               fieldDescription="Enter path to data source"
+                               fieldLabel="Image Source"
+                               name="./image/fileReference"
+                               rootPath="/content"
+                               width="{Long}400"
+                               xtype="pathfield"/>
+                    <altText jcr:primaryType="nt:unstructured"
+                             fieldLabel="Image Alt Text"
+                             name="./image/altText"
+                             validateOnBlur="true"
+                             xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
